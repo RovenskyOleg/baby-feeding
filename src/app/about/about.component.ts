@@ -5,9 +5,9 @@ import {Component} from '@angular/core';
   pipes: [],
   providers: [],
   directives: [],
-  styleUrls: ['./about.css'],
-  templateUrl: './about.html'
+  styleUrls: ['./about.component.css'],
+  templateUrl: './about.component.html'
 })
 
-export class About {
+export class AboutComponent {
 }

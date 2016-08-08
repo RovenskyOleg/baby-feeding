@@ -1,16 +1,16 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import {About} from './about/about';
-import {RegistrationBaby} from './RegistrationBaby/registrationBaby';
-import {Dashboard} from './dashboard/dashboard';
-import {Report} from './report/report';
+import {AboutComponent} from './about/about.component';
+import {RegistrationBabyComponent} from './RegistrationBaby/registration-baby.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {ReportComponent} from './report/report.component';
 
 const routes: RouterConfig = [
   { path: '', redirectTo: 'about', terminal: true },
-  { path: 'about', component: About },
-  { path: 'registration-baby', component: RegistrationBaby },
-  { path: 'dashboard', component: Dashboard },
-  { path: 'report', component: Report },
+  { path: 'about', component: AboutComponent },
+  { path: 'registration-baby', component: RegistrationBabyComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'report', component: ReportComponent },
 ];
 
 export const APP_ROUTER_PROVIDERS = [

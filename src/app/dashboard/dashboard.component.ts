@@ -7,9 +7,9 @@ import {BabyFeeding} from './babyFeeding/babyFeeding'
   pipes: [],
   providers: [],
   directives: [DashboardHeader, BabyFeeding],
-  styleUrls: ['./dashboard.css'],
-  templateUrl: './dashboard.html'
+  styleUrls: ['./dashboard.component.css'],
+  templateUrl: './dashboard.component.html'
 })
 
-export class Dashboard {
+export class DashboardComponent {
 }

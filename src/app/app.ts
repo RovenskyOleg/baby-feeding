@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
-import {Footer} from './footer/footer'
+import {FooterComponent} from './footer/footer.component'
 
 @Component({
   selector: 'app',
   pipes: [],
   providers: [],
-  directives: [ROUTER_DIRECTIVES, Footer],
+  directives: [ROUTER_DIRECTIVES, FooterComponent],
   templateUrl: './app.html',
 })
 

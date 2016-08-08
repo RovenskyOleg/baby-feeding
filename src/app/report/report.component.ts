@@ -5,9 +5,9 @@ import {Component} from '@angular/core';
   pipes: [],
   providers: [],
   directives: [],
-  styleUrls: ['./report.css'],
-  templateUrl: './report.html'
+  styleUrls: ['./report.component.css'],
+  templateUrl: './report.component.html'
 })
 
-export class Report {
+export class ReportComponent {
 }

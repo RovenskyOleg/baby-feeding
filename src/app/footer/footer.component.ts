@@ -5,10 +5,10 @@ import {Component} from '@angular/core';
   pipes: [],
   providers: [],
   directives: [],
-  styleUrls: ['./footer.css'],
-  templateUrl: './footer.html'
+  styleUrls: ['./footer.component.css'],
+  templateUrl: './footer.component.html'
 })
 
-export class Footer {
+export class FooterComponent {
 
 }
