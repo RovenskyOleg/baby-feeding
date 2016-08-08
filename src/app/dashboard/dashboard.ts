@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {DashboardHeader} from './dashboard-header/dashboard-header'
+import {DashboardHeader} from './dashboard-header/dashboard-header.component'
 import {BabyFeeding} from './babyFeeding/babyFeeding'
 
 @Component({

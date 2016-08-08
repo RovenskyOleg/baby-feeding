@@ -5,8 +5,8 @@ import {Component} from '@angular/core';
   pipes: [],
   providers: [],
   directives: [],
-  styleUrls: ['./dashboard-header.css'],
-  templateUrl: './dashboard-header.html'
+  styleUrls: ['./dashboard-header.component.css'],
+  templateUrl: './dashboard-header.component.html'
 })
 
 export class DashboardHeader {
