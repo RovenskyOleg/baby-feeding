@@ -1,7 +1,7 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
 import {AboutComponent} from './about/about.component';
-import {RegistrationBabyComponent} from './RegistrationBaby/registration-baby.component';
+import {RegistrationBabyComponent} from './registration-baby/registration-baby.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {ReportComponent} from './report/report.component';
 
