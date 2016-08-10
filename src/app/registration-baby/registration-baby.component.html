@@ -30,6 +30,38 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-default" [disabled]="!babyForm.form.valid">Submit</button>
+        <div class="form-group">
+            <label for="birthdate">Birthdate</label>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="year (example: 2000)" required
+                       [(ngModel)]="model.birthdate.year" ngControl="birthdateYear" #birthdateYear="ngForm">
+                <span class="input-group-addon"> / </span>
+                <input type="text" class="form-control" placeholder="month (example: 03)" required
+                       [(ngModel)]="model.birthdate.month" ngControl="birthdateMonth" #birthdateMonth="ngForm">
+                <span class="input-group-addon"> / </span>
+                <input type="text" class="form-control" placeholder="date (example: 10)" required
+                       [(ngModel)]="model.birthdate.date" ngControl="birthdateDate" #birthdateDate="ngForm">
+                <span class="input-group-addon">  </span>
+                <input type="text" class="form-control" placeholder="hour (example: 14)" required
+                       [(ngModel)]="model.birthdate.hour" ngControl="birthdateHour" #birthdateHour="ngForm">
+                <span class="input-group-addon"> : </span>
+                <input type="text" class="form-control" placeholder="minutes (example: 30)" required
+                       [(ngModel)]="model.birthdate.minutes" ngControl="birthdateMinutes" #birthdateMinutes="ngForm">
+            </div>
+            <!--<div [hidden]="birthdateYear.valid || birthdateYear.pristine" class="alert alert-danger">-->
+                <!--Birthdate Year is required-->
+            <!--</div>-->
+            <!--<div [hidden]="birthdateMonth.valid || birthdateMonth.pristine" class="alert alert-danger">-->
+                <!--Birthdate Month is required-->
+            <!--</div>-->
+            <!--<div [hidden]="birthdateDate.valid || birthdateDate.pristine" class="alert alert-danger">-->
+                <!--Birthdate Date is required-->
+            <!--</div>-->
+            <!--<div [hidden]="birthdateHour.valid || birthdateHour.pristine" class="alert alert-danger">-->
+                <!--Birthdate Hour is required-->
+            <!--</div>-->
+        </div>
+
+        <button type="submit" class="btn btn-success pull-right" [disabled]="!babyForm.form.valid">Submit</button>
     </form>
 </div>

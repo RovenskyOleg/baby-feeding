@@ -20,6 +20,7 @@ export class RegistrationBabyComponent implements OnInit {
 
     onSubmit() {
         this.submitted = true;
+
         console.log('*** submit form baby ***', this.model);
     }
 
@@ -28,5 +29,6 @@ export class RegistrationBabyComponent implements OnInit {
         this.model = this.babyService.getBaby();
 
         console.log('*** baby model ***', this.model);
+        console.log('*** baby model ***', this.model.birthdate);
     }
 }

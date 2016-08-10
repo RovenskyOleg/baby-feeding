@@ -4,6 +4,6 @@ export class Baby {
         public firstname: string,
         public lastname: string,
         public gender: string,
-        public birthdate?: string
+        public birthdate?: Object // type Date when implement datepicker
     ) {  }
 }
