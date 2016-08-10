@@ -23,10 +23,6 @@ export class RegistrationBabyComponent implements OnInit {
         console.log('*** baby model ***', this.model);
     }
 
-    newBaby() {
-        this.model = new Baby(42, '', '', '');
-    }
-
     ngOnInit(){
         console.log('*** ngOnInit ***');
         console.log('*** baby ***', this.babyService.getBaby());
