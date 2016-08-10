@@ -1,9 +1,9 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import {AboutComponent} from './about/about.component';
-import {RegistrationBabyComponent} from './registration-baby/registration-baby.component';
-import {DashboardComponent} from './dashboard/dashboard.component';
-import {ReportComponent} from './report/report.component';
+import {AboutComponent} from './about';
+import {RegistrationBabyComponent} from './registration-baby';
+import {DashboardComponent} from './dashboard';
+import {ReportComponent} from './report';
 
 const routes: RouterConfig = [
   { path: '', redirectTo: 'about', terminal: true },
