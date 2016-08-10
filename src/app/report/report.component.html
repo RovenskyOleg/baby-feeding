@@ -1,9 +1,10 @@
 <h3>Report Component</h3>
 <base-chart class="chart"
-            [data]="lineChartData"
-            [labels]="lineChartLabels"
-            [options]="lineChartOptions"
-            [chartType]="lineChartType"
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
             (chartHover)="chartHovered($event)"
             (chartClick)="chartClicked($event)">
 </base-chart>

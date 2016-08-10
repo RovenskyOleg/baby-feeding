@@ -2,7 +2,7 @@ import { provideRouter, RouterConfig } from '@angular/router';
 
 import {AboutComponent} from './about';
 import {RegistrationBabyComponent} from './registration-baby';
-import {DashboardComponent} from './dashboard';
+import {DashboardComponent} from './+dashboard';
 import {ReportComponent} from './report';
 
 const routes: RouterConfig = [

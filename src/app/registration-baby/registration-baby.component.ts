@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core'
-import {Baby} from './baby'
 import {BabyService} from './baby.service'
 
 @Component({
