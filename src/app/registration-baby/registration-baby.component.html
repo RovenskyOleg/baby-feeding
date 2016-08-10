@@ -1,29 +1,35 @@
 <div class="container">
-  <h3>Registration Baby</h3>
-  <form (ngSubmit)="onSubmit()" #babyForm="ngForm">
-    <div class="form-group">
-      <label for="firstname">Firstname</label>
-      <input type="text" class="form-control" required
-             [(ngModel)]="model.firstname" ngControl="firstname" #firstname="ngForm">
-      <div [hidden]="firstname.valid || firstname.pristine" class="alert alert-danger">
-        Firstname is required
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="lastname">Lastname</label>
-      <input type="text" class="form-control" required
-             [(ngModel)]="model.lastname" ngControl="lastname" #lastname="ngForm">
-      <div [hidden]="lastname.valid || lastname.pristine" class="alert alert-danger">
-        Lastname is required
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="gender">gender</label>
-      <select class="form-control" required
-              [(ngModel)]="model.gender" name="gender">
-        <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-default" [disabled]="!babyForm.form.valid">Submit</button>
-  </form>
+    <h3>Registration Baby</h3>
+    <form (ngSubmit)="onSubmit()" #babyForm="ngForm">
+        <div class="form-group">
+            <label for="firstname">Firstname</label>
+            <input type="text" class="form-control" required
+                 [(ngModel)]="model.firstname" ngControl="firstname" #firstname="ngForm">
+            <div [hidden]="firstname.valid || firstname.pristine" class="alert alert-danger">
+                Firstname is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastname">Lastname</label>
+            <input type="text" class="form-control" required
+                 [(ngModel)]="model.lastname" ngControl="lastname" #lastname="ngForm">
+            <div [hidden]="lastname.valid || lastname.pristine" class="alert alert-danger">
+                Lastname is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">gender</label>
+            <select class="form-control" required
+                  [(ngModel)]="model.gender" ngControl="gender" #gender="ngForm">
+                <option *ngFor="let g of genders" [value]="g">{{g}}</option>
+            </select>
+            <div [hidden]="gender.valid || gender.pristine" class="alert alert-danger">
+                Gender is required
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-default" [disabled]="!babyForm.form.valid">Submit</button>
+    </form>
 </div>

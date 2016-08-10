@@ -15,17 +15,18 @@ export class RegistrationBabyComponent implements OnInit {
     genders = ['male', 'female'];
     model;
     submitted = false;
-    
+
     constructor(private babyService: BabyService) { }
 
     onSubmit() {
         this.submitted = true;
-        console.log('*** baby model ***', this.model);
+        console.log('*** submit form baby ***', this.model);
     }
 
     ngOnInit(){
         console.log('*** ngOnInit ***');
-        console.log('*** baby ***', this.babyService.getBaby());
         this.model = this.babyService.getBaby();
+
+        console.log('*** baby model ***', this.model);
     }
 }
