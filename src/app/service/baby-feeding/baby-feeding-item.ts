@@ -4,6 +4,6 @@ export class BabyFeedingItem {
         public startFeeding: Object,
         public endFeeding: Object,
         public typeFeeding: string,
-        public date: Date
+        public date?: Date
     ) {  }
 }

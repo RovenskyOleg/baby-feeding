@@ -1,8 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {CHART_DIRECTIVES} from 'ng2-charts/ng2-charts';
 import {BabyFeedingService} from './../service/baby-feeding/baby-feeding.service'
-
-import * as moment from 'moment';
 
 @Component({
     selector: 'report',
@@ -13,20 +11,22 @@ import * as moment from 'moment';
     templateUrl: './report.component.html'
 })
 
-export class ReportComponent implements OnInit {
+export class ReportComponent {
     constructor(private BabyFeedingService: BabyFeedingService) { }
+
+    public reports:any = this.BabyFeedingService.getFeedingDateReport();
 
     public barChartOptions:any = {
         scaleShowVerticalLines: false,
         responsive: true
     };
-    public barChartLabels:string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+    public barChartLabels:string[] = this.reports.date;
     public barChartType:string = 'bar';
     public barChartLegend:boolean = true;
 
     public barChartData:any[] = [
         {
-            data: [65, 59, 80, 81, 56, 55, 40],
+            data: this.reports.feeding,
             label: 'Baby Feeding'
         }
     ];
@@ -38,10 +38,5 @@ export class ReportComponent implements OnInit {
 
     public chartHovered(e:any):void {
         // console.log(e);
-    }
-
-    ngOnInit(){
-        console.log('*** BabyFeedingService ***', this.BabyFeedingService.getBabyFeedingItems());
-        console.log('check work moment', moment().format('YYYY/MM/DD'));
     }
 }

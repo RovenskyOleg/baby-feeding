@@ -14,6 +14,10 @@ import {BabyFeedingRenderer} from './baby-feeding-renderer'
 
 export class BabyFeeding implements OnInit {
     items:BabyFeedingItem[] = [];
+    feeding = new BabyFeedingItem(0, {}, {}, '', new Date());
+    isEditMode = false;
+    isNewFeeding = true;
+    // isFeedingView = true;
 
     @Input() type:string;
 
@@ -23,8 +27,7 @@ export class BabyFeeding implements OnInit {
         this.items = this.BabyFeedingService.getBabyFeedingItems();
     }
 
-    addItem(startFeeding:Object, endFeeding:Object, date:Date) {
-        console.log(startFeeding, endFeeding, date);
-        // this.items.push(new BabyFeedingItem());
+    ngOnChanges() {
+        console.log('type', this.type);    
     }
 }

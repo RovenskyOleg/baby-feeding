@@ -1,35 +1,69 @@
-<div class="form-group">
-    <label for="start-feeding">Start Feeding</label>
-    <div class="input-group">
-        <input type="text" class="form-control"
-               placeholder="hour"
-               [(ngModel)]="item.startFeeding.hour">
+<div [hidden]="!isNewFeeding || (!isEditMode && !isNewFeeding)" class="edit-mode">
+    <div class="form-group">
+        <label for="start-feeding">Start Feeding</label>
+        <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="hour"
+                   [(ngModel)]="item.startFeeding.hour">
 
-        <span class="input-group-addon"> : </span>
+            <span class="input-group-addon"> : </span>
 
-        <input type="text" class="form-control"
-               placeholder="minutes"
-               [(ngModel)]="item.startFeeding.minutes">
+            <input type="text" class="form-control"
+                   placeholder="minutes"
+                   [(ngModel)]="item.startFeeding.minutes">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="finish-feeding">Finish Feeding</label>
+        <div class="input-group">
+            <input type="text" class="form-control"
+                   placeholder="hour"
+                   [(ngModel)]="item.endFeeding.hour">
+
+            <span class="input-group-addon"> : </span>
+
+            <input type="text" class="form-control"
+                   placeholder="minutes"
+                   [(ngModel)]="item.endFeeding.minutes">
+        </div>
+    </div>
+
+    <div class="item-type-feeding">type feeding: {{item.typeFeeding}}</div>
+
+    <div class="item-date">date feeding: {{item.date}}</div>
+
+    <div [hidden]="isNewFeeding" >
+        <button class="btn btn-success">Save</button>
+    </div>
+
+    <div [hidden]="!isNewFeeding" >
+        <button class="btn btn-success" (click)="addItem(item.startFeeding, item.endFeeding)">Add</button>
     </div>
 </div>
-
-<div class="form-group">
-    <label for="finish-feeding">Finish Feeding</label>
-    <div class="input-group">
-        <input type="text" class="form-control"
-               placeholder="hour"
-               [(ngModel)]="item.endFeeding.hour">
-
-        <span class="input-group-addon"> : </span>
-
-        <input type="text" class="form-control"
-               placeholder="minutes"
-               [(ngModel)]="item.endFeeding.minutes">
+<p>isEditMode{{isEditMode}} && isNewFeeding{{isNewFeeding}} </p>
+<div [hidden]="isEditMode || isNewFeeding" class="view-mode">
+    <div class="form-group">
+        <label for="start-feeding">Start Feeding</label>
+        <div class="input-group">
+            <span class="input-group-addon">{{item.startFeeding.hour}}</span>
+            <span class="input-group-addon"> : </span>
+            <span class="input-group-addon">{{item.startFeeding.minutes}}</span>
+        </div>
     </div>
+
+    <div class="form-group">
+        <label for="finish-feeding">Finish Feeding</label>
+        <div class="input-group">
+            <span class="input-group-addon">{{item.endFeeding.hour}}</span>
+            <span class="input-group-addon"> : </span>
+            <span class="input-group-addon">{{item.endFeeding.minutes}}</span>
+        </div>
+    </div>
+
+    <div class="item-type-feeding">type feeding: {{item.typeFeeding}}</div>
+
+    <div class="item-date">date feeding: {{item.date}}</div>
+
+    <button class="btn btn-success">Edit</button>
 </div>
-
-<div class="item-type-feeding">type feeding: {{item.typeFeeding}}</div>
-
-<div class="item-date">date feeding: {{item.date}}</div>
-
-<button class="btn btn-success">Save</button>
