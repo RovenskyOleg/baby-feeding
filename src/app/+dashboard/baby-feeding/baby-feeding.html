@@ -1,0 +1,10 @@
+<h3>Baby Feeding Lists</h3>
+<div class="">
+    <div class="add-item ">
+        <button class="btn btn-success center-block">Add Feeding</button>
+    </div>
+
+    <div class="item" *ngFor="#item of items">
+        <baby-feeding-renderer [item]="item"></baby-feeding-renderer>
+    </div>
+</div>

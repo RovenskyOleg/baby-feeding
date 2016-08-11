@@ -1,14 +1,15 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {BabyFeedingService} from './../../service/baby-feeding/baby-feeding.service'
 import {BabyFeedingItem} from './../../service/baby-feeding/baby-feeding-item'
+import {BabyFeedingRenderer} from './baby-feeding-renderer'
 
 @Component({
   selector: 'baby-feeding',
   pipes: [],
   providers: [BabyFeedingService],
-  directives: [],
-  styleUrls: ['./babyFeeding.css'],
-  templateUrl: './babyFeeding.html'
+  directives: [BabyFeedingRenderer],
+  styleUrls: ['./baby-feeding.css'],
+  templateUrl: './baby-feeding.html'
 })
 
 export class BabyFeeding implements OnInit {
