@@ -41,7 +41,7 @@ export class ReportComponent implements OnInit {
     }
 
     ngOnInit(){
-        console.log('*** BabyFeedingService ***', this.BabyFeedingService.getBabyFeeding());
+        console.log('*** BabyFeedingService ***', this.BabyFeedingService.getBabyFeedingItems());
         console.log('check work moment', moment().format('YYYY/MM/DD'));
     }
 }

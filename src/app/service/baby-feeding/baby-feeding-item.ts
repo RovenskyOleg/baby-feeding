@@ -1,4 +1,4 @@
-export class BabyFeeding {
+export class BabyFeedingItem {
     constructor(
         public id: number,
         public startFeeding: Object,

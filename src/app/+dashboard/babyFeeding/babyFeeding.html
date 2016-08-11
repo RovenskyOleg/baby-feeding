@@ -1,1 +1,54 @@
-<h3>Baby Feeding Component</h3>
+<h3>Baby Feeding Lists</h3>
+<div class="">
+    <div class="add-item ">
+        <button class="btn btn-success center-block">Add Feeding</button>
+    </div>
+
+    <form class="items" #babyFeedingForm="ngForm">
+        <div class="item" *ngFor="let item of items">
+            <div class="form-group">
+                <label for="start-feeding">Start Feeding</label>
+                <div class="input-group">
+                    <input type="text" class="form-control"
+                           placeholder="hour"
+                           [(ngModel)]="item.startFeeding.hour"
+                           ngControl="startFeedingHour"
+                           #startFeedingHour="ngForm">
+
+                    <span class="input-group-addon"> : </span>
+
+                    <input type="text" class="form-control"
+                           placeholder="minutes"
+                           [(ngModel)]="item.startFeeding.minutes"
+                           ngControl="startFeedingMinutes"
+                           #startFeedingMinutes="ngForm">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="finish-feeding">Finish Feeding</label>
+                <div class="input-group">
+                    <input type="text" class="form-control"
+                           placeholder="hour"
+                           [(ngModel)]="item.endFeeding.hour"
+                           ngControl="endFeedingHour"
+                           #endFeedingHour="ngForm">
+
+                    <span class="input-group-addon"> : </span>
+
+                    <input type="text" class="form-control"
+                           placeholder="minutes"
+                           [(ngModel)]="item.endFeeding.hour"
+                           ngControl="endFeedingHour"
+                           #endFeedingHour="ngForm">
+                </div>
+            </div>
+
+            <div class="item-type-feeding">type feeding: {{item.typeFeeding}}</div>
+
+            <div class="item-date">date feeding: {{item.date}}</div>
+
+            <button class="btn btn-success">Save</button>
+        </div>
+    </form>
+</div>
