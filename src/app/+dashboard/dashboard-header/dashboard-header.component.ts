@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'dashboard-header-component',
@@ -10,5 +10,17 @@ import {Component} from '@angular/core';
 })
 
 export class DashboardHeader {
+    selectedType: string;
 
+    @Output() type = new EventEmitter();
+
+    constructor() {
+        this.selectedType = 'lactation';
+    }
+
+    public setSelecteedType(e) {
+        this.selectedType = e.target.value;
+
+        this.type.emit(this.selectedType);
+    }
 }

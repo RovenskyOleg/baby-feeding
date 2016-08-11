@@ -1,4 +1,11 @@
-<form action="">
-  <input type="radio" name="feeding" value="breast"> lactation<br>
-  <input type="radio" name="feeding" value="bottle"> bottle feeding<br>
+<form ngForm action="">
+    <input type="radio"
+           [ngModel]="selectedType"
+           (change)="setSelecteedType($event)"
+           name="typeFeeding" value="lactation"> lactation<br>
+
+    <input type="radio"
+           [ngModel]="selectedType"
+           (change)="setSelecteedType($event)"
+           name="typeFeeding" value="bottle"> bottle<br>
 </form>

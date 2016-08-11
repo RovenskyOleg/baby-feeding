@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {DashboardHeader} from './dashboard-header/dashboard-header.component'
-import {BabyFeeding} from './babyFeeding/babyFeeding'
+import {DashboardHeader} from './dashboard-header/dashboard-header.component';
+import {BabyFeeding} from './babyFeeding/babyFeeding';
 
 @Component({
   selector: 'dashboard',
@@ -12,4 +12,9 @@ import {BabyFeeding} from './babyFeeding/babyFeeding'
 })
 
 export class DashboardComponent {
+    selectedType: string;
+
+    updatedTypeFeeding(typeFeeding) {
+        this.selectedType = typeFeeding;
+    }
 }
