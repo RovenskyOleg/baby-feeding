@@ -14,9 +14,9 @@ import {BabyFeedingRenderer} from './baby-feeding-renderer'
 
 export class BabyFeeding implements OnInit {
     items:BabyFeedingItem[] = [];
-    feeding = new BabyFeedingItem(0, {}, {}, '', new Date());
-    isEditMode = false;
-    isNewFeeding = true;
+    feeding:any = new BabyFeedingItem(0, {}, {}, '', new Date());
+    isEditMode:boolean = false;
+    isNewFeeding:boolean = true;
     // isFeedingView = true;
 
     @Input() type:string;

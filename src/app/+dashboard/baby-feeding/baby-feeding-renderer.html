@@ -41,7 +41,7 @@
         <button class="btn btn-success" (click)="addItem(item.startFeeding, item.endFeeding)">Add</button>
     </div>
 </div>
-<p>isEditMode{{isEditMode}} && isNewFeeding{{isNewFeeding}} </p>
+
 <div [hidden]="isEditMode || isNewFeeding" class="view-mode">
     <div class="form-group">
         <label for="start-feeding">Start Feeding</label>
